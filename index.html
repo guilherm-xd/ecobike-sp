@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoBike SP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <span class="logo">🚲 EcoBike SP</span>
+    <nav>
+      <ul class="menu">
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+    <button id="btn-tema" type="button">🌙 Modo escuro</button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Pedale pela cidade, sem complicação</h1>
+      <p>Aluguel de bicicletas urbanas, elétricas e cargo por hora, com estações espalhadas por São Paulo.</p>
+      <a class="botao" href="#simulador">Simular meu preço</a>
+    </section>
+
+    <section id="planos">
+      <h2>Nossos planos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Urbana</h3>
+          <p class="preco">R$ 12/h</p>
+          <p>Ideal para passeios e trajetos curtos.</p>
+        </article>
+        <article class="card">
+          <h3>Elétrica</h3>
+          <p class="preco">R$ 20/h</p>
+          <p>Mais força nas subidas, menos suor.</p>
+        </article>
+        <article class="card">
+          <h3>Cargo</h3>
+          <p class="preco">R$ 25/h</p>
+          <p>Para levar compras, crianças ou carga.</p>
+        </article>
+      </div>
+      <p class="aviso">Acima de 5 horas, 10% de desconto!</p>
+    </section>
+
+    <section id="simulador">
+      <h2>Simulador de preço</h2>
+      <form class="formulario" onsubmit="return false">
+        <label for="horas">Horas de uso</label>
+        <input type="number" id="horas" min="1" placeholder="Ex.: 3">
+
+        <label for="tipo">Tipo de bike</label>
+        <select id="tipo">
+          <option value="urbana">Urbana</option>
+          <option value="eletrica">Elétrica</option>
+          <option value="cargo">Cargo</option>
+        </select>
+
+        <button type="button" id="btn-calcular" class="botao">Calcular</button>
+      </form>
+      <p id="resultado">Preencha os campos e clique em Calcular.</p>
+    </section>
+
+    <section id="reservas">
+      <h2>Pré-reservas</h2>
+      <form class="formulario" onsubmit="return false">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button type="button" id="btn-adicionar" class="botao">Adicionar</button>
+      </form>
+      <ul id="lista-reservas"></ul>
+      <p>Total de reservas: <strong id="contador">0</strong></p>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Contato: marina@ecobikesp.com.br</p>
+    <p>© 2026 EcoBike SP</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

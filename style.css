@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 :root {
@@ -53,6 +54,9 @@ h2 {
   padding: 14px 20px;
   background: var(--cor-card);
   border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -194,6 +198,10 @@ select {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 110px;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -203,6 +211,30 @@ select {
   }
 
   .topo {
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+
+  .topo nav {
+    order: 3;
+    width: 100%;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 8px;
+  }
+
+  .menu {
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 6px 10px;
+  }
+
+  #btn-tema {
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
 }

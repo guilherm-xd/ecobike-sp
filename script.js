@@ -23,3 +23,14 @@ function calcularValor(horas, tipo) {
   }
   return valor * horas;
 }
+
+function formatarMoeda(valor) {
+  return valor
+    .toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      useGrouping: false,
+    })
+    .replace(/\u00A0/g, " ");
+}
+

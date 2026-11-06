@@ -1,20 +1,9 @@
-// ===== Seleção de elementos =====
 const btnTema = document.querySelector("#btn-tema");
-
 const inputHoras = document.querySelector("#horas");
 const selectTipo = document.querySelector("#tipo");
 const btnCalcular = document.querySelector("#btn-calcular");
 const resultado = document.querySelector("#resultado");
-
 const inputNome = document.querySelector("#nome");
 const btnAdicionar = document.querySelector("#btn-adicionar");
 const listaReservas = document.querySelector("#lista-reservas");
 const contador = document.querySelector("#contador");
-
-// ===== Sua parte: funções e eventos =====
-// calcularValor(horas, tipo)
-// formatarMoeda(valor)
-// mostrarResultado()
-// adicionarReserva()
-// atualizarContador()
-// alternarTema()

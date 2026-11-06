@@ -34,3 +34,28 @@ function formatarMoeda(valor) {
     .replace(/\u00A0/g, " ");
 }
 
+function mostrarResultado() {
+  const horas = Number(inputHoras.value);
+  const tipo = selectTipo.value;
+ 
+  if (!inputHoras.value || isNaN(horas) || horas <= 0) {
+    resultado.textContent = "Informe um número de horas válido";
+    return;
+  }
+ 
+  const total = calcularValor(horas, tipo);
+  resultado.textContent = formatarMoeda(total);
+}
+
+function mostrarResultado() {
+  const horas = Number(inputHoras.value);
+  const tipo = selectTipo.value;
+ 
+  if (!inputHoras.value || isNaN(horas) || horas <= 0) {
+    resultado.textContent = "Informe um número de horas válido";
+    return;
+  }
+ 
+  const total = calcularValor(horas, tipo);
+  resultado.textContent = formatarMoeda(total);
+}

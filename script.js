@@ -90,3 +90,7 @@ function adicionarReserva() {
 function alternarTema() {
   document.body.classList.toggle("dark");
 }
+
+btnCalcular.addEventListener("click", mostrarResultado);
+btnAdicionar.addEventListener("click", adicionarReserva);
+btnTema.addEventListener("click", alternarTema);

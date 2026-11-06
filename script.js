@@ -59,3 +59,34 @@ function mostrarResultado() {
   const total = calcularValor(horas, tipo);
   resultado.textContent = formatarMoeda(total);
 }
+
+function atualizarContador() {
+  contador.textContent = listaReservas.children.length;
+}
+ 
+function adicionarReserva() {
+  const nome = inputNome.value.trim();
+  if (nome === "") return;
+ 
+  const li = document.createElement("li");
+  li.textContent = nome;
+ 
+  const remover = document.createElement("button");
+  remover.textContent = "Remover";
+  remover.style.backgroundColor = "#c93636";
+ 
+  remover.addEventListener("click", function () {
+    li.remove();
+    atualizarContador();
+  });
+ 
+  li.appendChild(remover);
+  listaReservas.appendChild(li);
+ 
+  inputNome.value = "";
+  atualizarContador();
+}
+ 
+function alternarTema() {
+  document.body.classList.toggle("dark");
+}
